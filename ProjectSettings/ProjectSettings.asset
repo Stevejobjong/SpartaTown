@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 00000000000000000000000000000000
+  productGUID: ed6ff36b7182b7d4bb01e9729e8cb935
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -710,7 +710,7 @@ PlayerSettings:
   cloudProjectId: b82cdb9e-8563-4932-a539-7b42b70ce8cd
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: SpartaTown
   organizationId: whddns1000
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

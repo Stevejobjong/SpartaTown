@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     private PlayerController _controller;
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
+    [SerializeField] private Animator _animator;
     private void Awake()
     {
         _controller = GetComponent<PlayerController>();
@@ -26,10 +27,10 @@ public class PlayerMove : MonoBehaviour
         print("Move »£√‚µ ");
         _movementDirection = dir;
     }
-    private void ApplyMovement(Vector2 direction)
+    private void ApplyMovement(Vector2 dir)
     {
-        direction = direction * 5;
-
-        _rigidbody.velocity = direction;
+        dir = dir * 5;
+        _animator.SetFloat("Speed", dir.normalized.magnitude);
+        _rigidbody.velocity = dir;
     }
 }

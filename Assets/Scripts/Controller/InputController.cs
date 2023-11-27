@@ -23,9 +23,6 @@ public class InputController : PlayerController
         Vector2 worldPos = _camera.ScreenToWorldPoint(mPos);
         mPos = (worldPos - (Vector2)transform.position).normalized;
 
-        if (mPos.magnitude > .9f)
-        {
-            CallLookEvent(mPos);
-        }
+        CallLookEvent(mPos);
     }
 }
