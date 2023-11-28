@@ -25,6 +25,7 @@ public class InitNickname : MonoBehaviour
     public void SetNickname()
     {
         nick.text = inputField.text;
+        MainUI.instance.SetParticipant();
         Time.timeScale = 1.0f;
         this.gameObject.SetActive(false);
     }
