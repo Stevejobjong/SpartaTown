@@ -8,6 +8,7 @@ public class MainUI : MonoBehaviour
 {
     public TMP_Text timetxt;
     [SerializeField] GameObject characterSelectUI;
+    [SerializeField] GameObject InitNameUI;
     void Update()
     {
         timetxt.text = DateTime.Now.ToString(("HH:mm:ss"));
@@ -16,5 +17,9 @@ public class MainUI : MonoBehaviour
     public void ShowCharacterSelectUI()
     {
         characterSelectUI.SetActive(true);
+    }
+    public void ShowInitNameUI()
+    {
+        InitNameUI.SetActive(true);
     }
 }
