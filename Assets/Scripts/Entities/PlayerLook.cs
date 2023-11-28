@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer characterRenderer;
+    [SerializeField] private List<SpriteRenderer> characterRenderers;
 
     private PlayerController _controller;
     private void Awake()
@@ -26,6 +26,6 @@ public class PlayerLook : MonoBehaviour
     private void RotatePlayer(Vector2 dir)
     {
         float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        characterRenderer.flipX = Mathf.Abs(rotZ) > 90f;
+        characterRenderers[(int)GameManager.instance.CurCharacter].flipX = Mathf.Abs(rotZ) > 90f;
     }
 }

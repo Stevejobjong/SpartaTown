@@ -8,23 +8,25 @@ public class InitNickname : MonoBehaviour
 {
     [SerializeField] private TMP_Text nick;
     [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private Button button;
+    [SerializeField] private Button joinBtn;
     void Start()
     {
-        
+        Time.timeScale = 0.0f;
     }
 
     void Update()
     {
         if (inputField.text.Length < 2 || inputField.text.Length > 10)
-            button.gameObject.SetActive(false);
+            joinBtn.gameObject.SetActive(false);
         else
-            button.gameObject.SetActive(true);
+            joinBtn.gameObject.SetActive(true);
     }
 
     public void SetNickname()
     {
         nick.text = inputField.text;
+        Time.timeScale = 1.0f;
         this.gameObject.SetActive(false);
     }
+    
 }
