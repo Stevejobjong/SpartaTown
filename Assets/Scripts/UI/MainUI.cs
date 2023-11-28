@@ -31,6 +31,7 @@ public class MainUI : MonoBehaviour
     }
     public void ShowInitNameUI()
     {
+        Time.timeScale = 0.0f;
         InitNameUI.SetActive(true);
     }
     public void ShowParticipant()
