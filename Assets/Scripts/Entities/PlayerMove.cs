@@ -7,7 +7,6 @@ public class PlayerMove : MonoBehaviour
     private PlayerController _controller;
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
-    [SerializeField] private List<Animator> _animators;
     private void Awake()
     {
         _controller = GetComponent<PlayerController>();
@@ -30,7 +29,6 @@ public class PlayerMove : MonoBehaviour
     private void ApplyMovement(Vector2 dir)
     {
         dir = dir * 5;
-        _animators[(int)GameManager.instance.CurCharacter].SetFloat("Speed", dir.normalized.magnitude);
         _rigidbody.velocity = dir;
     }
 }
